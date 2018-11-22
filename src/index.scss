@@ -10,11 +10,14 @@
  
   @return $x1;
 }
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
 
 $hex-size: 150px;
 $hex-height: $hex-size / sqrt(3);
-$hex-color: #C6538C;
-
+$hex-color: #009543;
+$main-color: #009543;
 
 .hexagon {
   position: relative;
@@ -24,11 +27,13 @@ $hex-color: #C6538C;
   margin: $hex-height / 2;
   display: inline-block;
   margin-right: -35px;
+  @extend %fa-icon;
+  @extend .fas;
 }
 
 .hexagon:before,
 .hexagon:after {
-  content: "";
+  content: fa-content($fa-var-user);
   position: absolute;
   width: 0;
   border-left: $hex-size / 2 solid transparent;
@@ -47,7 +52,35 @@ $hex-color: #C6538C;
   border-top: $hex-height / 2 solid $hex-color;
 }
 
-.row-2{
-  margin-top: -40px;
+.App{
+  background: url('./assets/bg_app1.png');
+  background-size: cover;
+  padding-bottom: 7.9%;
+  .navbar{
+    .navbar-brand{
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar-collapse{
+      .navbar-nav{
+        .nav-item{
+          a{
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .landing-page-simtanah{
+    margin-top: 4%;
+  }
+  .row-2{
+    margin-top: -40px;
+  }
+  .hexa-1{
+    margin-left: -35px;
+  }
 }
+
 // end of simtanah
