@@ -1,0 +1,53 @@
+// simtanah
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+ 
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+ 
+  @return $x1;
+}
+
+$hex-size: 150px;
+$hex-height: $hex-size / sqrt(3);
+$hex-color: #C6538C;
+
+
+.hexagon {
+  position: relative;
+  width: $hex-size; 
+  height: $hex-height;
+  background-color: $hex-color;
+  margin: $hex-height / 2;
+  display: inline-block;
+  margin-right: -35px;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: $hex-size / 2 solid transparent;
+  border-right: $hex-size / 2 solid transparent;
+  left: 0px;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: $hex-height / 2 solid $hex-color;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: $hex-height / 2 solid $hex-color;
+}
+
+.row-2{
+  margin-top: -40px;
+}
+// end of simtanah
