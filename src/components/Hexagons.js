@@ -13,7 +13,7 @@ class Hexagons extends Component{
                     <div className="col-xl-12">
                         <Hexa
                             color = '#009543'
-                            text = 'BERANDA' 
+                            text = 'BERANDA'
                         />
                         <Hexa
                             color = '#029142'
