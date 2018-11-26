@@ -1,13 +1,13 @@
 $main-color : #009543;
 $hex-size : 180px;
 .App{
-  background: url('./assets/bg_app1.png');
-  background-size: cover;
-  padding-bottom: 7.9%;
   .navbar{
     .navbar-brand{
       color: #fff;
       font-weight: bold;
+    }
+    .navbar-toggler{
+      color: #fff;
     }
     .navbar-collapse{
       .navbar-nav{
@@ -20,11 +20,60 @@ $hex-size : 180px;
       }
     }
   }
+  .navbar-2-sim{
+    background: $main-color;
+  }
   .landing-page-simtanah{
-    margin-top: 3.8%;
+    background: url('./assets/bg_app1.png');
+    background-size: cover;
+    padding: 0px;
+    @media (max-width: 1440px) {
+      padding-bottom: 8.7%;
+    }
+    @media (min-width: 1441px) {
+      padding-bottom: 25.9%;
+    }
+    margin-top: -5%;
+    padding-top: 8%; 
+    .row{
+      margin-left: 0px;
+      margin-right: 0px;
+      .col-xl-12{
+        @media(max-width: 575.98px){
+          width: 90%
+        }
+      }
+      .hexa-responsive{
+        :nth-child(3){
+          .hexa-pack{
+            @media(max-width: 575.98px){
+              margin-top: -6%;
+              margin-bottom: 2%;
+            }
+          }
+        }
+      }
+    }
   }
   .row-2{
     margin-top: -40px;
+    .col-xl-12{
+      .link-responsive{
+        .hexa-pack{
+          @media(max-width: 575.98px){
+            margin-top: 2%;
+            margin-bottom: 10%;
+          }
+        }
+      }
+      .link-responsive--1{
+        .hexa-pack{
+          @media(max-width: 575.98px){
+            margin-top: -6%;
+          }
+        }
+      }
+    }
   }
   .hexa-pack{
     display: inline-block;

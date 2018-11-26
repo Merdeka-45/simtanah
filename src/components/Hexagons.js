@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Hexa from './Hexa';
+// import Header from './Header';
+import { Link } from 'react-router-dom';
 
 class Hexagons extends Component{
     constructor(){
@@ -8,60 +10,83 @@ class Hexagons extends Component{
     }
     render(){
         return(
-            <div className="container landing-page-simtanah">
-                <div className="row">
-                    <div className="col-xl-12">
-                        <Hexa
-                            color = '#009543'
-                            text = 'BERANDA'
-                        />
-                        <Hexa
-                            color = '#029142'
-                            text = 'PROFIL' 
-                        />
-                        <Hexa
-                            color = '#058c41'
-                            text = 'PELAYANAN' 
-                        />
+            <React.Fragment>
+                {/* <Header/> */}
+                <div className="container-fluid landing-page-simtanah">
+                    <div className="row">
+                        <div className="col-xl-12 hexa-responsive">
+                            <Link to="/">
+                                <Hexa
+                                    color = '#009543'
+                                    text = 'BERANDA'
+                                />
+                            </Link>
+                            <Link to="/profile">
+                                <Hexa
+                                    color = '#029142'
+                                    text = 'PROFIL' 
+                                />
+                            </Link>
+                            <Link to="/layanan">
+                                <Hexa
+                                    color = '#058c41'
+                                    text = 'PELAYANAN' 
+                                />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="row row-2">
+                        <div className="col-xl-12">
+                            <Link to="/aduan">
+                                <Hexa
+                                    color = '#037234'
+                                    text = 'PENGADUAN' 
+                                />
+                            </Link>
+                            <Link to="/unduh">
+                                <Hexa
+                                    color = '#066d33'
+                                    text = 'UNDUH' 
+                                />
+                            </Link>
+                            <Link to="/galeri" className="link-responsive">
+                                <Hexa
+                                    color = '#086832'
+                                    text = 'GALERI' 
+                                />
+                            </Link>
+                            <Link to="/informasi">
+                                <Hexa
+                                    color = '#0c6834'
+                                    text = 'INFORMASI SPASIAL' 
+                                />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="row row-2">
+                        <div className="col-xl-12">
+                            <Link to="/kontak">
+                                <Hexa
+                                    color = '#024921'
+                                    text = 'KONTAK' 
+                                />
+                            </Link>
+                            <Link to="/login">
+                                <Hexa
+                                    color = '#044420'
+                                    text = 'LOGIN' 
+                                />
+                            </Link>
+                            <Link to="/galeri" className="link-responsive--1">
+                                <Hexa
+                                    color = '#064421'
+                                    text = 'GALERI' 
+                                />
+                            </Link>
+                        </div>
                     </div>
                 </div>
-                <div className="row row-2">
-                    <div className="col-xl-12">
-                        <Hexa
-                            color = '#037234'
-                            text = 'PENGADUAN' 
-                        />
-                        <Hexa
-                            color = '#066d33'
-                            text = 'UNDUH' 
-                        />
-                        <Hexa
-                            color = '#086832'
-                            text = 'GALERI' 
-                        />
-                        <Hexa
-                            color = '#0c6834'
-                            text = 'INFORMASI SPASIAL' 
-                        />
-                    </div>
-                </div>
-                <div className="row row-2">
-                    <div className="col-xl-12">
-                        <Hexa
-                            color = '#024921'
-                            text = 'KONTAK' 
-                        />
-                        <Hexa
-                            color = '#044420'
-                            text = 'LOGIN' 
-                        />
-                        <Hexa
-                            color = '#064421'
-                            text = 'GALERI' 
-                        />
-                    </div>
-                </div>
-            </div>
+            </React.Fragment>
         )
     }
 }

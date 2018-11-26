@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -26,7 +26,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-          <Navbar expand="md" fixed>
+          <Navbar expand="md" className="navbar-2-sim">
             <NavbarBrand href="/"> 
               SISTEM INFORMASI PERTANAHAN
             </NavbarBrand>
@@ -36,7 +36,28 @@ class Header extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">HOME</NavLink>
+                  <NavLink href="/">BERANDA</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/profil">PROFIL</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/layanan">PELAYANAN</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/aduan">PENGADUAN</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/unduh">UNDUH</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/galeri">GALERI</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/informasi">INFORMASI SPASIAL</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/kontak">KONTAK</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/login">LOGIN</NavLink>

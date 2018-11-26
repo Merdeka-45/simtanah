@@ -50,6 +50,7 @@
     "react-dev-utils": "^6.1.1",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
     "reactstrap": "^6.5.0",
     "resolve": "1.8.1",
     "serve": "^10.1.1",
@@ -125,6 +126,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.7.7",
+    "@types/reactstrap": "^6.4.2",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0"
   }
