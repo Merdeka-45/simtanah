@@ -1,57 +1,5 @@
-// simtanah
-@function sqrt($r) {
-  $x0: 1;
-  $x1: $x0;
- 
-  @for $i from 1 through 10 {
-    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
-    $x0: $x1;
-  }
- 
-  @return $x1;
-}
-@import "./fontawesome/scss/fontawesome.scss";
-@import "./fontawesome/scss/solid.scss";
-@import "./fontawesome/scss/brands.scss";
-
-$hex-size: 150px;
-$hex-height: $hex-size / sqrt(3);
-$hex-color: #009543;
-$main-color: #009543;
-
-.hexagon {
-  position: relative;
-  width: $hex-size; 
-  height: $hex-height;
-  background-color: $hex-color;
-  margin: $hex-height / 2;
-  display: inline-block;
-  margin-right: -35px;
-  @extend %fa-icon;
-  @extend .fas;
-}
-
-.hexagon:before,
-.hexagon:after {
-  content: fa-content($fa-var-user);
-  position: absolute;
-  width: 0;
-  border-left: $hex-size / 2 solid transparent;
-  border-right: $hex-size / 2 solid transparent;
-  left: 0px;
-}
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: $hex-height / 2 solid $hex-color;
-}
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: $hex-height / 2 solid $hex-color;
-}
-
+$main-color : #009543;
+$hex-size : 180px;
 .App{
   background: url('./assets/bg_app1.png');
   background-size: cover;
@@ -73,14 +21,52 @@ $main-color: #009543;
     }
   }
   .landing-page-simtanah{
-    margin-top: 4%;
+    margin-top: 3.8%;
   }
   .row-2{
     margin-top: -40px;
   }
-  .hexa-1{
-    margin-left: -35px;
+  .hexa-pack{
+    display: inline-block;
   }
+  .hexa{
+    mask: url(../src/assets/svg-hex.svg);
+    color: #fff;
+    height: $hex-size;
+    width: $hex-size - 10;
+    padding-left: 10px;
+    margin-left: -5px;
+    mask-size: $hex-size;
+    -webkit-mask-size: $hex-size;
+    cursor: pointer;
+    .content-hexa{
+      position: relative;
+      top: 60px;
+      .svg-inline--fa{
+        font-size: 20pt;
+      }
+    }
+  }
+  .desc-hexa{
+    position: fixed;
+    width: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    height: 100%;
+    padding-top: 5%;
+    transition: all 0.5s ease;
+  }
+}
+.close-btn{
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  font-size: 20pt;
+  cursor: pointer;
 }
 
 // end of simtanah

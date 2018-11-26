@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+import Hexagons from './components/Hexagons'
 import './App.css';
-// import logo_simtanah from './assets/logo_simtanah.png';
 import {
   Collapse,
   Navbar,
@@ -13,15 +10,12 @@ import {
   NavItem,
   NavLink} from 'reactstrap';
 
-  library.add(faStroopwafel)
-
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
@@ -49,41 +43,111 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <div className="container landing-page-simtanah">
-            <div className="row">
+        <Hexagons />
+        {/* <div className="container landing-page-simtanah"> */}
+            {/* <div className="row">
               <div className="col-xl-12">
-                <div className="hexagon hexa-1">
-                  <FontAwesomeIcon icon="stroopwafel" />
+                <div className="hexa" onClick={()=>this.descHex()}>
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>BERANDA</p>
+                  </div>
                 </div>
-                <div className="hexagon">
+                {
+                  this.state.isShow ?
+                  <div className="desc-hexa" style={{width:this.state.isShow, opacity:this.state.isOpacity}}>
+                    <FontAwesomeIcon icon={faTimes} className="close-btn" onClick={()=>this.closeDesc()}/>
+                    <div className="row justify-content-center">
+                      <div className="col-xl-10">
+                          <FontAwesomeIcon icon={faHome} />
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                  :null
+                }
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>PROFIL</p>
+                  </div>
                 </div>
-                <div className="hexagon">
+                {
+                  this.state.isShow ?
+                  <div className="desc-hexa" style={{width:this.state.isShow, opacity:this.state.isOpacity}}>
+                    <FontAwesomeIcon icon={faTimes} className="close-btn" onClick={()=>this.closeDesc()}/>
+                    <div className="row justify-content-center">
+                      <div className="col-xl-10">
+                          <FontAwesomeIcon icon={faHome} />
+                          <p> PROFILE
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                  :null
+                }
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>PELAYANAN</p>  
+                  </div>
+                </div>
+              </div>
+            </div> */}
+            {/* <div className="row row-2">
+              <div className="col-xl-12">
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>PENGADUAN</p>
+                  </div>
+                </div>
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>UNDUH</p>
+                  </div>
+                </div>
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>GALERI</p>  
+                  </div>
+                </div>
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>INFORMASI SPASIAL</p>  
+                  </div>
                 </div>
               </div>
             </div>
             <div className="row row-2">
-              <div className="col-xl-12">
-                <div className="hexagon hexa-1">
+             <div className="col-xl-12">
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>KONTAK</p>
+                  </div>
                 </div>
-                <div className="hexagon">
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>LOGIN</p>
+                  </div>
                 </div>
-                <div className="hexagon">
-                </div>
-                <div className="hexagon">
+                <div className="hexa">
+                  <div className="content-hexa">
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>GALERI</p>  
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="row row-2">
-              <div className="col-xl-12">
-                <div className="hexagon hexa-1">
-                </div>
-                <div className="hexagon">
-                </div>
-                <div className="hexagon">
-                </div>
-              </div>
-            </div>
-        </div>
+            </div> */}
+        {/* </div> */}
       </div>
     );
   }
