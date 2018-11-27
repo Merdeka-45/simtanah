@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Header2 from './../Header2';
+// import Header2 from './../Header2';
+import Header3 from './../Header3';
 class Galeri extends Component {
   render() {
     return (
         <React.Fragment>
-            <Header2/>
-            <div className="row justify-content-center">
+            <Header3/>
+            <div className="row justify-content-center simtanah-page-content">
                 <div className="col-md-10">
                     <h1 className="display-4">Page Galeri</h1>
                     <p className="text-center">
