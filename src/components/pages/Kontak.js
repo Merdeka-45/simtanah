@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-
+import Header2 from './../Header2';
 class Kontak extends Component {
   render() {
     return (
+      <React.Fragment>
+        <Header2/>
       <div className="row justify-content-center">
             <div className="col-md-10">
                 <h1 className="display-4">Page Kontak</h1>
@@ -11,6 +13,7 @@ class Kontak extends Component {
                 </p>
             </div>
       </div>
+      </React.Fragment>
     )
   }
 }

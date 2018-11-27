@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Hexa from './Hexa';
-// import Header from './Header';
+import Header from './Header';
 import { Link } from 'react-router-dom';
 
 class Hexagons extends Component{
@@ -11,7 +11,7 @@ class Hexagons extends Component{
     render(){
         return(
             <React.Fragment>
-                {/* <Header/> */}
+                <Header/>
                 <div className="container-fluid landing-page-simtanah">
                     <div className="row">
                         <div className="col-xl-12 hexa-responsive">

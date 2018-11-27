@@ -7,8 +7,7 @@ import Informasi from './components/pages/Informasi_Spasial';
 import Kontak from './components/pages/Kontak';
 import Galeri from './components/pages/Galeri';
 import Login from './components/pages/Login';
-import Header from './components/Header';
-import Header2 from './components/Header2';
+import Unduh from './components/pages/Unduh';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -19,19 +18,9 @@ class App extends Component {
       nav1: false
     }
   }
-
-  navbarSim(){
-    if(this.state.nav1 === true){
-      return(<Header/>)
-    }else{
-      return(<Header2/>)
-    }
-  }
-
   render() {
     return (
       <div className="App">
-        {this.navbarSim()}
         <Router>
           <div className="sim-tanah">
             <Switch>
@@ -43,6 +32,7 @@ class App extends Component {
               <Route exact path="/kontak" component={Kontak} />
               <Route exact path="/galeri" component={Galeri} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/unduh" component={Unduh} />
             </Switch>
           </div>
         </Router>
