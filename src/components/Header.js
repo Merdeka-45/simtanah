@@ -26,7 +26,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-          <Navbar expand="md" fixed>
+          <Navbar expand="md" fixed="true">
             <NavbarBrand href="/"> 
               SISTEM INFORMASI PERTANAHAN
             </NavbarBrand>

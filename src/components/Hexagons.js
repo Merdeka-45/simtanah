@@ -55,7 +55,7 @@ class Hexagons extends Component{
                                     text = 'GALERI' 
                                 />
                             </Link>
-                            <Link to="/informasi">
+                            <Link to="/informasi" className="link-responsive--2">
                                 <Hexa
                                     color = '#0c6834'
                                     text = 'INFORMASI SPASIAL' 
@@ -63,7 +63,7 @@ class Hexagons extends Component{
                             </Link>
                         </div>
                     </div>
-                    <div className="row row-2">
+                    <div className="row row-2 last-row">
                         <div className="col-xl-12">
                             <Link to="/kontak">
                                 <Hexa
