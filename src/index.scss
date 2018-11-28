@@ -42,15 +42,16 @@ $hex-size : 180px;
     background-attachment: fixed;
     padding: 0px;
     @media (max-width: 1440px) {
-      padding-bottom: 8%;
-      padding-top: 11%; 
+      padding-bottom: 20%;
+      padding-top: 20%;
     }
     @media (min-width: 1441px) {
       padding-bottom: 25.9%;
       padding-top: 20%; 
     }
-    @media(max-width: 575.98px){
+    @media(max-width: 599px){
       padding-top: 25%; 
+      padding-bottom: 40%;
     }
     margin-top: -5%;
     .row{
@@ -176,7 +177,51 @@ $hex-size : 180px;
 }
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width: 1201px) {
+@media (min-width: 1920px){
+  #hexGrid {
+    padding-bottom: 4.4%;
+  }
+  .hex {
+    width: 20%;
+    /* = 100 / 5 */
+    &:nth-child(9n+6) {
+      /* first hexagon of even rows */
+      margin-left: 10%;
+      /* = width of .hex / 2  to indent even rows */
+    }
+  }
+  .navbar{
+      .navbar-brand{
+        font-size: 25pt
+      }
+      .navbar-collapse{
+        .navbar-nav{
+          .nav-item{
+            a{
+              font-size: 25pt;
+            }
+          }
+        }
+    }
+  }
+  .hex {
+    .hexIn{
+      .hexLink{
+        svg{
+          font-size: 40pt;
+          position: relative;
+          top: 130px;
+        }
+        p{
+          position: relative;
+          top: 130px;
+          font-size: 25pt;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1919px) and (min-width: 1201px) {
   /* <- 5-4  hexagons per row */
   #hexGrid {
     padding-bottom: 4.4%;
@@ -188,6 +233,16 @@ $hex-size : 180px;
       /* first hexagon of even rows */
       margin-left: 10%;
       /* = width of .hex / 2  to indent even rows */
+    }
+    svg{
+      font-size: 25pt;
+      position: relative;
+      top: 75px;
+    }
+    p{
+      position: relative;
+      top: 80px;
+      font-size: 15pt;
     }
   }
 }
