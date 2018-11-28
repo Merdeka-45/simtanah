@@ -7,7 +7,7 @@ class Unduh extends Component {
         <Header3/>
       <div className="row justify-content-center simtanah-page-content">
           <div className="col-md-10">
-              <h1 className="display-4">Page Unduh</h1>
+              <h1 className="display-4 text-center">Page Unduh</h1>
               <p className="text-center">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae facere sint expedita repellat vero, aspernatur non ratione doloribus aperiam magni soluta id, animi saepe laborum quasi deleniti dolorem voluptatem dignissimos.
               </p>

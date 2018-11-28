@@ -12,11 +12,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
   list: {
     width: 250,
-  }
+  },
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
 };
 
 class Header3 extends React.Component {
@@ -91,8 +100,8 @@ class Header3 extends React.Component {
         <Divider />
         <List>
           {this.state.Menus.map(list_menu => (
-            <Link to={list_menu.link}>
-              <ListItem button key={list_menu.id} className="list-menu-drawer">
+            <Link key={list_menu.id}  to={list_menu.link}>
+              <ListItem button className="list-menu-drawer">
                 {/* <ListItemIcon><FontAwesomeIcon icon={faHome} /></ListItemIcon> */}
                 <ListItemText primary={list_menu.text}/>
               </ListItem>
@@ -102,8 +111,16 @@ class Header3 extends React.Component {
       </div>
     );
     return (
-        <div>
-            <div className="row justify-content-between navbar-drawer pl-5 pr-5">
+        <div className={classes.root}>
+            <AppBar position="static" color="default" className="navbar-drawer">
+              <Toolbar>
+                <Typography variant="h6" color="inherit" className={classes.grow}>
+                  <FontAwesomeIcon icon={faHome}/> SISTEM INFORMASI PERTANAHAN
+                </Typography>
+                <Button onClick={this.toggleDrawer('left', true)}><FontAwesomeIcon icon={faBars} /></Button>
+              </Toolbar>
+            </AppBar>
+            {/* <div className="row justify-content-between navbar-drawer pl-5 pr-5">
                 <div className="col-8 text-left brand-drawer">
                     <Link to="/">
                         <FontAwesomeIcon icon={faHome} className="mt-1 mr-2 float-left"/>
@@ -111,9 +128,9 @@ class Header3 extends React.Component {
                     </Link>
                 </div>
                 <div className="col-1 pt-1 menu-drawer">
-                    <Button onClick={this.toggleDrawer('left', true)}><FontAwesomeIcon icon={faBars} /></Button>
+                   
                 </div>
-            </div>
+            </div> */}
             <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
                 <div
                     tabIndex={0}
