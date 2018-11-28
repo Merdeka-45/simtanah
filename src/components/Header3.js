@@ -81,18 +81,22 @@ class Header3 extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
-            <ListItem button>
-              <ListItemIcon><FontAwesomeIcon icon={faHome} /></ListItemIcon>
-              <ListItemText primary="BERANDA" />
-            </ListItem>
+            <Link to="/">
+              <ListItem button>
+                <ListItemIcon><FontAwesomeIcon icon={faHome} /></ListItemIcon>
+                <ListItemText primary="BERANDA" />
+              </ListItem>
+            </Link>
         </List>
         <Divider />
         <List>
           {this.state.Menus.map(list_menu => (
-            <ListItem button key={list_menu.id} className="list-menu-drawer">
-              {/* <ListItemIcon><FontAwesomeIcon icon={faHome} /></ListItemIcon> */}
-              <ListItemText primary={list_menu.text}/>
-            </ListItem>
+            <Link to={list_menu.link}>
+              <ListItem button key={list_menu.id} className="list-menu-drawer">
+                {/* <ListItemIcon><FontAwesomeIcon icon={faHome} /></ListItemIcon> */}
+                <ListItemText primary={list_menu.text}/>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </div>
@@ -100,7 +104,7 @@ class Header3 extends React.Component {
     return (
         <div>
             <div className="row justify-content-between navbar-drawer pl-5 pr-5">
-                <div className="col-5 text-left brand-drawer">
+                <div className="col-8 text-left brand-drawer">
                     <Link to="/">
                         <FontAwesomeIcon icon={faHome} className="mt-1 mr-2 float-left"/>
                         <p className="text-brand-drawer"></p>
