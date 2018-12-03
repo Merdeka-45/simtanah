@@ -65,7 +65,7 @@ class Hexagons extends Component{
                     color: '#0c6834',
                     text: 'INFORMASI SPASIAL',
                     link: 'informasi',
-                    icon: <FontAwesomeIcon icon={faInfoCircle}/>
+                    faicon: <FontAwesomeIcon icon={faInfoCircle}/>
                 },
                 {
                     id: 8,
@@ -97,7 +97,6 @@ class Hexagons extends Component{
                                     <li className="hex" key={list_menu.id}>
                                         <div className="hexIn">
                                             <Link to={list_menu.link} className="hexLink" style={{backgroundColor:list_menu.color}}>
-                                                {/* <img src={pict} alt=""/> */}
                                                 {list_menu.faicon}
                                                 <p>{list_menu.text}</p>
                                             </Link>
